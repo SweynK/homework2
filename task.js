@@ -60,6 +60,18 @@ let calculateWorkload = factory.calculateWorkload.bind(workloadData);
 hint :  თუ კი ფუნქციაში არ გვაქვს this ქივორდის საჭიროება და შესაბამისად ობიექტი რომელსაც
 thisმა უნდა მიუთითოს შეგიძლიათ apply call-ს პირველი არგუმენტად გადასცეთ null 
 */
+
+function sumOfNumbers(...args){
+  let sum = 0;
+  for(let i = 0; i<args.length;i++){
+    sum += args[i];
+  }
+  return sum;
+}
+let sum = sumOfNumbers.apply(null,[2,5,6,7,2,1,3]);
+
+console.log(sum);
+
 /*
 const arrNums = [1,2,3,4,5,6]
 const sumOfNumbers = function(total, num){
